@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Document metadata -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Page title -->
+    <title>Character Details</title>
+  </head>
+  <body class="bg-gray-400">
+    <div class="flex-col justify-center items-center min-h-screen">
+      <!-- Navbar section -->
+      <div
+        class="bg-red-400 flex justify-between py-4 shadow-lg shadow-teal-300 px-8 fixed w-full top-0 z-50"
+      >
+        <a class="text-2xl font-bold font-serif" href="../index.html"
+          >SuperHero-Hunt</a
+        >
+        <div class="flex justify-end w-52 text-lg font-semibold">
+          <a class="hover:text-gray-700" href="favourite.html">Favourites</a>
+        </div>
+      </div>
+
+      <!-- Character details section -->
+      <section class="flex justify-center my-10 pt-20">
+        <!-- Container for the character details -->
+        <div
+          id="characterWrapper"
+          class="flex justify-center items-center w-full"
+        ></div>
+      </section>
+
+      <!-- Comics section -->
+      <section class="pb-5">
+        <!-- Heading for Comics section -->
+        <h2 class="text-2xl text-center mb-4 font-semibold">Comics</h2>
+
+        <!-- Container for displaying comic details -->
+        <div
+          id="comics"
+          class="flex justify-around items-start gap-3 flex-wrap"
+        >
+          <i class="fas fa-spinner text-7xl animate-spin"></i>
+        </div>
+      </section>
+    </div>
+
+    <!-- JavaScript file for handling character information -->
+    <script src="../javascript/characterInfo.js"></script>
+  </body>
+</html>

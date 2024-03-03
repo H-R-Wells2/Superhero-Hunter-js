@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- Document metadata -->
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to Font Awesome for icons -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css"
+      integrity="sha512-1ycn6IcaQQ40/MKBW2W4Rhis/DbILU74C1vSrLJxCq57o941Ym01SwNsOMqvEBFlcgUa6xLiPY/NS5R+E6ztJQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Link to Tailwind CSS CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Style for smooth scrolling -->
+    <style>
+      html {
+        scroll-behavior: smooth;
+      }
+    </style>
+
+    <!-- Page title -->
+    <title>SuperHero-Hunt</title>
+  </head>
+  <body>
+    <div class="bg-gray-400 flex-col justify-center items-center min-h-screen">
+      <!-- Navbar section -->
+      <div
+        class="bg-red-400 flex justify-between py-4 shadow-lg shadow-teal-300 px-8 fixed w-full top-0 z-50"
+      >
+        <a class="text-2xl font-bold font-serif" href="#">SuperHero-Hunt</a>
+        <div class="flex justify-between w-52 text-lg font-semibold">
+          <a class="hover:text-gray-700" href="#charactersSection"
+            >Characters</a
+          >
+          <a class="hover:text-gray-700" href="pages/favourite.html"
+            >Favourites</a
+          >
+        </div>
+      </div>
+
+      <!-- Search character section -->
+      <div class="flex justify-center my-10 pt-20 search-section">
+        <!-- Search input box -->
+        <input
+          id="searchBox"
+          type="text"
+          class="bg-slate-100 px-4 py-3 rounded-l-2xl outline-none text-xl shadow-md shadow-teal-300 w-1/3 h-16"
+          placeholder="Search any Marvel characters..."
+          autocomplete="off"
+        />
+        <!-- Search button icon -->
+        <i
+          id="searchBtn"
+          class="fas fa-search fa-2x bg-red-400 flex items-center rounded-r-2xl p-3 hover:bg-red-500 cursor-pointer shadow-md shadow-teal-300"
+        ></i>
+      </div>
+
+      <!-- Search results section -->
+      <section class="flex justify-center items-center mx-16">
+        <div id="searchResult"></div>
+      </section>
+
+      <!-- Characters section -->
+      <section
+        id="charactersSection"
+        class="flex-col justify-center items-center mx-16"
+      >
+        <h3 class="text-center text-2xl font-semibold my-16">
+          Random Characters
+        </h3>
+        <!-- Loading spinner for characters -->
+        <div
+          class="flex justify-around items-center flex-wrap gap-10"
+          id="characters-container"
+        >
+          <i class="fas fa-spinner text-7xl animate-spin"></i>
+        </div>
+      </section>
+    </div>
+
+    <!-- JavaScript scripts -->
+    <script src="./javascript/home.js"></script>
+    <script src="./javascript/addFavourite.js"></script>
+  </body>
+</html>
