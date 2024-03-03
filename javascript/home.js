@@ -43,10 +43,7 @@ fetchData()
       let div = document.createElement("div");
       div.className = "flex-col bg-gray-600 p-3 rounded-md text-white w-48 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-teal-300 my-3 relative";
       div.setAttribute("id", id);
-      // path fot development
-      // let path = `../pages/characterDetails.html#${id}`;
-      // path for production
-      let path = `/pages/characterDetails.html#${id}`;
+      let path = `/Superhero-Hunter-js/pages/characterDetails.html#${id}`;
 
       // Creating the HTML structure for each character
       div.innerHTML = `
@@ -113,10 +110,7 @@ searchBtn.addEventListener("click", () => {
         let div = document.createElement("div");
         div.className = "flex-col bg-gray-600 p-3 rounded-md text-white w-48 shadow-lg transition-all duration-200 hover:scale-105 hover:shadow-teal-300 my-3 relative";
         div.setAttribute("id", id);
-        // path fot development
-        // let path = `../pages/characterDetails.html#${id}`;
-        // path for production
-        let path = `/pages/characterDetails.html#${id}`;
+        let path = `/Superhero-Hunter-js/pages/characterDetails.html#${id}`;
 
         div.innerHTML = `
           <img class="poster" src=${thumbnail.path}.${thumbnail.extension} alt="">
